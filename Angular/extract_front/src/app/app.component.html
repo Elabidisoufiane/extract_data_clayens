@@ -1,0 +1,10 @@
+<!-- Toggle Button -->
+<button class="toggle-btn" (click)="toggleSidebar()">☰ Menu</button>
+
+<div class="sidebar" [class.active]="isSidebarVisible" >
+    <a class="nav-link" routerLink="/upload" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="toggleSidebar()" >Add</a>
+    <a class="nav-link" routerLink="/update" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="toggleSidebar()">Update</a>
+</div>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet />
