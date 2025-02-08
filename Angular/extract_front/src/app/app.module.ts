@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,   
     UploadComponent,
     SelectEmptyComponent,
-    ResultsComponent,
+    
     PageNotFoundComponentComponent,
     UpdateComponent,
     HomeComponent
@@ -27,6 +27,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     
   ],
   providers: [

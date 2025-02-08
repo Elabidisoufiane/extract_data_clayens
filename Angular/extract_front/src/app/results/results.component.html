@@ -1,1 +1,4 @@
-<p>results works!</p>
+<button (click)="getData()">Get Data</button>
+<div *ngIf="responseData">
+    <pre>{{ responseData}}</pre> 
+</div>
