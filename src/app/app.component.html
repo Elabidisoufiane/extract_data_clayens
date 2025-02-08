@@ -1,0 +1,700 @@
+
+<div class="container">
+  <h2>Red = Empty</h2>
+  
+  <!-- Temperature Section -->
+  <div class="section">
+    <h3>Temperature</h3>
+    <table>
+      <tr>
+        <th>Zone</th>
+        <th>Value </th>
+        <th>+/-</th>
+      </tr>
+      <tr>
+        <td>Buse</td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_1')" 
+          [ngClass]="{'green' : buttonStates['buse_1'], 'red': !buttonStates['buse_1']}">
+          {{ buttonStates['buse_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates1['buse_2'], 'red': !buttonStates1['buse_2']}">
+            {{ buttonStates1['buse_2'] ? 'ON' : 'OFF' }}
+          </button>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>Avant</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('avant_1')" 
+            [ngClass]="{'green' : buttonStates['avant_1'], 'red': !buttonStates['avant_1']}">
+            {{ buttonStates['avant_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('avant_2')" 
+          [ngClass]="{'green' : buttonStates1['avant_2'], 'red': !buttonStates1['avant_2']}">
+          {{ buttonStates1['avant_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>Zone 1</td>
+        <td><button 
+          (click)="toggleButtonState('zone1_1')" 
+          [ngClass]="{'green' : buttonStates['zone1_1'], 'red': !buttonStates['zone1_1']}">
+          {{ buttonStates['zone1_1'] ? 'ON' : 'OFF' }}
+        </button></td>
+        <td><button 
+          (click)="toggleButtonState('zone1_2')" 
+          [ngClass]="{'green' : buttonStates1['zone1_2'], 'red': !buttonStates1['zone1_2']}">
+          {{ buttonStates1['zone1_2'] ? 'ON' : 'OFF' }}
+      </button></td>
+        
+      </tr>
+      <tr>
+        <td>Zone 2</td>
+        <td><button 
+          (click)="toggleButtonState('zone2_1')" 
+          [ngClass]="{'green' : buttonStates['zone2_1'], 'red': !buttonStates['zone2_1']}">
+          {{ buttonStates['zone2_1'] ? 'ON' : 'OFF' }}
+        </button></td>
+        <td><button 
+          (click)="toggleButtonState('zone2_2')" 
+          [ngClass]="{'green' : buttonStates1['zone2_2'], 'red': !buttonStates1['zone2_2']}">
+          {{ buttonStates1['zone2_2'] ? 'ON' : 'OFF' }}
+        </button></td>
+        
+      </tr>
+      <tr>
+        <td>Zone 3</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('zone3_1')" 
+            [ngClass]="{'green' : buttonStates['zone3_1'], 'red': !buttonStates['zone3_1']}">
+            {{ buttonStates['zone3_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('zone3_2')" 
+          [ngClass]="{'green' : buttonStates1['zone3_2'], 'red': !buttonStates1['zone3_2']}">
+          {{ buttonStates1['zone3_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 4</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('zone4_1')" 
+            [ngClass]="{'green' : buttonStates['zone4_1'], 'red': !buttonStates['zone4_1']}">
+            {{ buttonStates['zone4_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('zone4_2')" 
+          [ngClass]="{'green' : buttonStates1['zone4_2'], 'red': !buttonStates1['zone4_2']}">
+          {{ buttonStates1['zone4_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 5</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('zone5_1')" 
+            [ngClass]="{'green' : buttonStates['zone5_1'], 'red': !buttonStates['zone5_1']}">
+            {{ buttonStates['zone5_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('zone5_2')" 
+          [ngClass]="{'green' : buttonStates1['zone5_2'], 'red': !buttonStates1['zone5_2']}">
+          {{ buttonStates1['zone5_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 6</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('zone6_1')" 
+            [ngClass]="{'green' : buttonStates['zone6_1'], 'red': !buttonStates['zone6_1']}">
+            {{ buttonStates['zone6_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('zone6_2')" 
+          [ngClass]="{'green' : buttonStates1['zone6_2'], 'red': !buttonStates1['zone6_2']}">
+          {{ buttonStates1['zone6_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Arrière</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('arriere_1')" 
+            [ngClass]="{'green' : buttonStates['arriere_1'], 'red': !buttonStates['arriere_1']}">
+            {{ buttonStates['arriere_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('arriere_2')" 
+          [ngClass]="{'green' : buttonStates1['arriere_2'], 'red': !buttonStates1['arriere_2']}">
+          {{ buttonStates1['arriere_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>Partie Fixe Affichee</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('fa_1')" 
+            [ngClass]="{'green' : buttonStates['fa_1'], 'red': !buttonStates['fa_1']}">
+            {{ buttonStates['fa_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('fa_2')" 
+          [ngClass]="{'green' : buttonStates1['fa_2'], 'red': !buttonStates1['fa_2']}">
+          {{ buttonStates1['fa_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Partie Fixe Lue</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('fl_1')" 
+            [ngClass]="{'green' : buttonStates['fl_1'], 'red': !buttonStates['fl_1']}">
+            {{ buttonStates['fl_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('fl_2')" 
+          [ngClass]="{'green' : buttonStates1['fl_2'], 'red': !buttonStates1['fl_2']}">
+          {{ buttonStates1['fl_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Partie Mobile Affichee</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('ma_1')" 
+            [ngClass]="{'green' : buttonStates['ma_1'], 'red': !buttonStates['ma_1']}">
+            {{ buttonStates['ma_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('ma_2')" 
+          [ngClass]="{'green' : buttonStates1['ma_2'], 'red': !buttonStates1['ma_2']}">
+          {{ buttonStates1['ma_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>Partie Mobile Lue</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('ml_1')" 
+            [ngClass]="{'green' : buttonStates['ml_1'], 'red': !buttonStates['ml_1']}">
+            {{ buttonStates['ml_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('ml_2')" 
+          [ngClass]="{'green' : buttonStates1['ml_2'], 'red': !buttonStates1['ml_2']}">
+          {{ buttonStates1['ml_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Plaque Inter</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('pi_1')" 
+            [ngClass]="{'green' : buttonStates['pi_1'], 'red': !buttonStates['pi_1']}">
+            {{ buttonStates['pi_1'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('pi_2')" 
+          [ngClass]="{'green' : buttonStates1['pi_2'], 'red': !buttonStates1['pi_2']}">
+          {{ buttonStates1['pi_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Temperature Bloc Outillage 
+  <div class="section">
+    <h3>Temperature Bloc Outillage</h3>
+    <table>
+      <tr>
+        <th>Zone</th>
+        <th>Value</th>
+        <th>+/-</th>
+      </tr>
+      <tr>
+        <td>Zone 1</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['zone6_1'], 'red': !buttonStates['zone6_1']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 2</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 3</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 4</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 5</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 6</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 7</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 8</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 9</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 10</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 11</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 12</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 13</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 14</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 15</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Zone 16</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+-->
+
+
+
+  <!-- Time Section 
+  <div class="section">
+    <h3>Temps</h3>
+    <table>
+      <tr>
+        <th>Process</th>
+        <th>Value</th>
+        <th>+/-</th>
+      </tr>
+      <tr>
+        <td>Injection</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Maintien</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        
+        
+      </tr>
+      <tr>
+        <td>Dosage</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Inter. Robot/Manip</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Refroidissement</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        
+
+      </tr>
+      <tr>
+        <td>Cycle presse</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Cycle total S/A</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+      </tr>
+      <tr>
+        <td>Retard dosage</td>
+        <td>
+          <button 
+            (click)="toggleButtonState('buse_2')" 
+            [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+            {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+        
+
+      </tr>
+      <tr>
+        <td>Retard injection</td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+
+      </tr>
+      <tr>
+        <td>Retard recul ponton</td>
+        <td>
+          <button 
+          (click)="toggleButtonState('buse_2')" 
+          [ngClass]="{'green' : buttonStates['buse_2'], 'red': !buttonStates['buse_2']}">
+          {{ buttonStates['buse_2'] ? 'ON' : 'OFF' }}
+        </button>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+
+  -->
+
+  <button (click)="showStates()">Show States</button>
+</div>
+
+
