@@ -12,7 +12,8 @@ import {FormsModule} from '@angular/forms';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { UpdateComponent } from './update/update.component';
 import { HomeComponent } from './home/home.component';
-
+import { CommonModule } from '@angular/common';
+import { NgIf } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,   
@@ -28,6 +29,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    CommonModule,
+    NgIf,
     
   ],
   providers: [

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ButtonStateService } from '../button-state.service';
 @Component({
   selector: 'app-select-empty',
   standalone: false,
@@ -21,7 +21,7 @@ export class SelectEmptyComponent {
     'zone5_2', 'zone6_2', 'arriere_2', 'fa_2', 'fl_2', 'ma_2', 'ml_2', 'pi_2'
   ];
 
-  constructor() {
+  constructor(private service: ButtonStateService) {
     this.initializeButtonStates();
   }
 
@@ -50,7 +50,10 @@ export class SelectEmptyComponent {
     }
   }
 
-  
+  navigate(){
+    this.service.setButtonStates(this.buttonStates);
+    this.service.setButtonStates1(this.buttonStates1);
+  }
 
 
 }

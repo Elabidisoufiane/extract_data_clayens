@@ -1,4 +1,19 @@
-<button (click)="getData()">Get Data</button>
-<div *ngIf="responseData">
-    <pre>{{ responseData}}</pre> 
+<div class="container">
+<h3>Temperature</h3>
+<table>
+    <thead>
+      <tr>
+        <th>Zone</th>
+        <th>Value</th>
+        <th>+/-</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let key of buttonKeys; let i = index">
+        <td>{{ key }}</td>
+        <td contenteditable="true" (input)="updateValue($event, key)">{{ values[key] }}</td>
+        <td contenteditable="true" (input)="updateValue1($event, buttonKeys1[i])">{{ values1[buttonKeys1[i]] }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

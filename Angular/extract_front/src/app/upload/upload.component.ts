@@ -52,11 +52,4 @@ export class UploadComponent {
     });
   }
 
-  navigateWithResponseData() {
-    const data = this.dataService.getResponseData();  // Get the response data
-
-    this.router.navigate(['/results'], {
-      state: { responseData: data }  // Pass data to the 'results' route
-    });
-  }
 }
