@@ -50,14 +50,15 @@ export class ResultsComponent {
     console.log("values1 :",this.values1);
   }
   updateValue(event: Event, key: string) {
-    const inputValue = (event.target as HTMLElement).innerText;
-    this.values[key] = inputValue;
+    const inputValue = (event.target as HTMLElement).innerText.trim();
+    this.values[key] = inputValue; // Updates the value and triggers ngClass update
   }
   
   updateValue1(event: Event, key: string) {
-    const inputValue = (event.target as HTMLElement).innerText;
+    const inputValue = (event.target as HTMLElement).innerText.trim();
     this.values1[key] = inputValue;
   }
+  
   
   /*initializeValues() {
     this.buttonKeys.forEach(key => this.buttonStates[key] = "");

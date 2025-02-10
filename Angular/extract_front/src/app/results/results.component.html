@@ -1,5 +1,5 @@
 <div class="container">
-<h3>Temperature</h3>
+    <h3>Temperature</h3>
 <table>
     <thead>
       <tr>
@@ -11,9 +11,19 @@
     <tbody>
       <tr *ngFor="let key of buttonKeys; let i = index">
         <td>{{ key }}</td>
-        <td contenteditable="true" (input)="updateValue($event, key)">{{ values[key] }}</td>
-        <td contenteditable="true" (input)="updateValue1($event, buttonKeys1[i])">{{ values1[buttonKeys1[i]] }}</td>
+        <td 
+          contenteditable="true" 
+          (input)="updateValue($event, key)" 
+          [ngClass]="{'empty-cell': !values[key]}">
+          {{ values[key] }}
+        </td>
+        <td 
+          contenteditable="true" 
+          (input)="updateValue1($event, buttonKeys1[i])" 
+          [ngClass]="{'empty-cell': !values1[buttonKeys1[i]]}">
+          {{ values1[buttonKeys1[i]] }}
+        </td>
       </tr>
     </tbody>
   </table>
-</div>
+</div> 

@@ -3,7 +3,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    background: #007bff;
+    background: #555658;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -15,7 +15,7 @@
   }
   
   .toggle-btn:hover {
-    background: #0056b3;
+    background: #2b2b2c;
   }
   
   /* Sidebar (hidden by default) */
@@ -25,7 +25,7 @@
     top: 0;
     height: 100vh;
     width: 250px;
-    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    background: linear-gradient(45deg, #292a2c, #323335);
     display: flex;
     flex-direction: column;
     justify-content: center;
