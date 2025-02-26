@@ -1,0 +1,83 @@
+Moule : x=114, y=83 / x=198, y=111
+
+Piece : x=413, y=85 / x=883, y=106
+
+Presse : x=114, y=111 / x=114, y=111
+
+Matiere : x=200, y=139 / x=284, y=113
+
+Temperature :
+
+    buse : x=581, y=277 / x=707, y=298 (+/-) x=750, y=276 / x=879, y=295
+
+    zone :
+
+        avant : x=879, y=293 / x=582, y=298 (+/-) x=708, y=316 / x=751, y=297
+        1:  x=878, y=313 / x=581, y=322 (+/-) x=706, y=338 / x=750, y=315
+        2: x=878, y=337 /x=580, y=338 (+/-) x=707, y=361 / x=748, y=336
+        3: x=879, y=360 / x=879, y=360     (+/-)
+        4:      (+/-)
+        5:      (+/-)
+        6:      (+/-)
+        Arriere :      (+/-)
+
+    Partie Fixe :
+
+        Affichee :      (+/-)
+        Lue :       (+/-)
+
+    Partie Mobile :
+
+        Affichee :      (+/-)
+        Lue :       (+/-)
+
+    Plaque Inter :      (+/-)
+
+
+    Clicked at: x=581, y=277
+Clicked at: x=707, y=298
+Clicked at: x=750, y=276
+Clicked at: x=879, y=295
+
+
+Clicked at: x=879, y=360
+Clicked at: x=578, y=360
+Clicked at: x=707, y=383
+Clicked at: x=748, y=360
+Clicked at: x=879, y=382
+Clicked at: x=578, y=383
+Clicked at: x=707, y=407
+Clicked at: x=749, y=382
+Clicked at: x=879, y=406
+Clicked at: x=579, y=405
+Clicked at: x=707, y=428
+Clicked at: x=747, y=403
+Clicked at: x=877, y=428
+Clicked at: x=578, y=429
+Clicked at: x=707, y=451
+Clicked at: x=747, y=428
+Clicked at: x=878, y=452
+Clicked at: x=579, y=450
+Clicked at: x=706, y=473
+Clicked at: x=748, y=449
+Clicked at: x=876, y=471
+Clicked at: x=578, y=470
+Clicked at: x=707, y=495
+Clicked at: x=747, y=469
+Clicked at: x=877, y=494
+Clicked at: x=577, y=493
+Clicked at: x=707, y=517
+Clicked at: x=748, y=489
+Clicked at: x=878, y=517
+Clicked at: x=577, y=511
+Clicked at: x=707, y=537
+Clicked at: x=748, y=511
+Clicked at: x=877, y=536
+Clicked at: x=577, y=534
+Clicked at: x=708, y=558
+Clicked at: x=748, y=535
+Clicked at: x=877, y=558
+Clicked at: x=576, y=557
+Clicked at: x=708, y=578
+Clicked at: x=746, y=555
+Clicked at: x=877, y=578
