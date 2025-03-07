@@ -1,51 +1,52 @@
-/* Animation to change card size */
-@keyframes card-size-change {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+
+.renderer-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn {
+  background-color: rgb(213, 57, 49);
+  text-shadow: #fbf7f7;
+  color: #fbf7f7;
+  left: 50px;
+}
+/* Style for the left navbar */
+.navbar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  padding-top: 20px;
 }
 
-/* Apply animation when the card has an error */
-.card.error {
-  animation: card-size-change 1s infinite;
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .image-container div {
-    cursor: pointer;
-    text-align: center;
-    width: 120px;
-  }
-  
-  .image-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover;
-  }
-  
-  .image-container img:hover {
-    transform: scale(1.1);
-  }
-  
-  .image-container p {
-    margin-top: 5px;
-    font-weight: bold;
-    color: #333;
-  }
+.navbar li {
+  padding: 10px;
+  text-align: center;
+}
 
-  
-  
+.navbar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+/* Style for the content area */
+.renderer-container {
+  margin-left: 200px; /* Make space for the sidebar */
+  padding: 0px;
+}
+
+

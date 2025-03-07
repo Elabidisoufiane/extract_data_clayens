@@ -14,7 +14,7 @@ export class AnalyseComponent {
   lineMachine: number = 0;
   idMachine: number = 0;
 
-  defectDescription: string = ''; // User input for defect
+  defect: string = ''; // User input for defect
   selectedRegleurId: number | null = null; // Store Regleur ID
   regleurs: { id: number; name: string ;role:string}[] = []; // Store regleurs with ID
 
@@ -46,22 +46,21 @@ export class AnalyseComponent {
 
   // Validate and submit the defect form
   submitDefect() {
-    if (!this.defectDescription || !this.selectedRegleurId) {
+    if (!this.defect || !this.selectedRegleurId) {
       alert("All fields are required!");
       return;
     }
 
     const defectData = {
-      name: this.defectDescription,
+      name: this.defect,
     
     };
     console.log("defectData:",defectData)
     this.http.post(`${this.apiUrl}/defects/${this.idMachine.toString()}/${this.selectedRegleurId.toString()}`, defectData).subscribe({
       next: () => {
         console.log(defectData);
-        this.sharedService.setThree(true); // Hide the main view
-        alert("Defect declared successfully!");
-        this.router.navigate(['/']); // Redirect after submission
+        let path = `/causes/${this.defect}`
+        this.router.navigate(path.split('/'));
       },
       error: (error) => {
         console.error("Error submitting defect:", error);
