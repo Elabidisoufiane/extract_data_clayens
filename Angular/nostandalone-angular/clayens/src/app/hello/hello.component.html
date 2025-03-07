@@ -1,0 +1,30 @@
+<div *ngIf="three" class="container">
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+      <!-- Cards -->
+      <div class="row justify-content-center">
+        <div 
+          class="col-md-2 col-sm-4 mb-3" 
+          *ngFor="let image of machines" 
+          (click)="navigateToDetail(image.hasError,image.label,image.line)"
+        >
+          <div 
+            class="card shadow-sm p-2 text-center" 
+            [ngClass]="{
+              'bg-danger text-white': image.hasError, 
+              'bg-success text-white': !image.hasError, 
+              'error': image.hasError
+            }"
+          >
+            <img [src]="src" [alt]="image.label" class="card-img-top small-img rounded">
+            <div class="card-body p-1">
+              <p class="fw-bold small-text">{{ image.label }}</p>
+              <p class="fw-bold small-text">Line: {{ image.line }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,51 @@
+/* Animation to change card size */
+@keyframes card-size-change {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation when the card has an error */
+.card.error {
+  animation: card-size-change 1s infinite;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .image-container div {
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+  }
+  
+  .image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-container p {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  
+  
